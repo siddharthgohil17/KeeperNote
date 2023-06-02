@@ -19,7 +19,7 @@ const AddKeeper = (props) => {
   const add = () => {
     if (keeperObj.title) {
       axios
-        .post("http://localhost:3001/api/addNew", keeperObj)
+        .post("https://unique-genie-7244ad.netlify.app/api/addnew", keeperObj)
         .then((res) => {
           // Call the onADD function from props to update the state in the parent component
           props.onADD(keeperObj);
