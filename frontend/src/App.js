@@ -16,7 +16,7 @@ function App() {
     const itemToDelete = list[id];
 
     try {
-      await axios.post("https://unique-genie-7244ad.netlify.app/api/delete", itemToDelete);
+      await axios.post("http://localhost:10000/api/delete", itemToDelete);
       console.log("Item deleted successfully");
     
       setList((prevlist) => prevlist.filter((item, index) => index !== id));
