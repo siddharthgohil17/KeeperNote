@@ -16,7 +16,7 @@ function App() {
     const itemToDelete = list[id];
 
     try {
-      await axios.post("http://localhost:10000/api/delete", itemToDelete);
+      await axios.post("https://taskmanager-ffsb.onrender.com/api/delete", itemToDelete);
       console.log("Item deleted successfully");
     
       setList((prevlist) => prevlist.filter((item, index) => index !== id));
@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:10000/api/getAll")
+      .get("https://taskmanager-ffsb.onrender.com/api/getAll")
       .then((res) => {
         setList(res.data);
       })

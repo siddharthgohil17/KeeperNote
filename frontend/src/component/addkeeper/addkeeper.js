@@ -19,7 +19,7 @@ const AddKeeper = (props) => {
   const add = () => {
     if (keeperObj.title) {
       axios
-        .post("http://localhost:10000/api/addNew", keeperObj)
+        .post("https://taskmanager-ffsb.onrender.com/api/addNew", keeperObj)
         .then((res) => {
           // Call the onADD function from props to update the state in the parent component
           props.onADD(keeperObj);
