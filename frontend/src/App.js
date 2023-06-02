@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/api/getAll")
+      .get("http://localhost:10000/api/getAll")
       .then((res) => {
         setList(res.data);
       })
