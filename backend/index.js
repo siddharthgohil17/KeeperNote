@@ -11,7 +11,7 @@ app.use(cors());
 
 async function main() {
   try {
-    await mongoose.connect('mongodb+srv://admin-sid:Sid123@cluster0.odxca98.mongodb.net/keeperDB', {
+    await mongoose.connect(process.env.MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
